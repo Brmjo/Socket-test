@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lobby - <%= username %></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./../css/lobby-styles.css">
+    </head>
+<body>
+    <h2>Welcome <%= username %></h2>
+    <p>Online Users: <span id="online-count-display">0</span></p>
+    <div id="room-list-box">
+        <div id="room-list-head">
+            <p>Room List</p>
+            <button id="add-room-button">Add Room</button>
+        </div>
+    </div>
+    <div id="chat">
+        <h2>Global Chat</h2>
+        <div id="chat-box"></div>
+        <div id="message-input-wrapper">
+            <input type="text" placeholder="Type your message" id="message-input">
+            <button id="send-button">SEND</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./../javascript/lobby-script.js"></script>
+</body>
+</html>
